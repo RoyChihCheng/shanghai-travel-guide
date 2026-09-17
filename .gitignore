@@ -1,0 +1,7 @@
+# Temporary files
+__pycache__/
+*.tmp
+validate_html.py
+generate_guide.py
+.DS_Store
+Thumbs.db

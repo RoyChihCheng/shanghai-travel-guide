@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="format-detection" content="telephone=no, address=no, email=no">
+  <meta name="description" content="上海五天四夜極致自由行詳細攻略指南。包含外灘陸家嘴雙面天際線、梧桐法租界老洋房散步、上博東館文博藝術、朱家角水鄉古鎮、地鐵官方路網雙向導航、5大維度實景路標認路與30大地道本幫美食全圖鑑。">
+  <title>上海五天四夜極致自由行詳細攻略指南 | Shanghai 5D4N Field Travel Guide</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fdf4f4',
+              100: '#fce7e7',
+              500: '#e11d48',
+              600: '#be123c',
+              700: '#9f1239',
+              800: '#881337',
+              900: '#4c0519',
+            },
+            shblue: '#005bac',
+            shgreen: '#007b43',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+    
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .glass-nav {
+      background: rgba(15, 23, 42, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .hero-pattern {
+      background-color: #0f172a;
+      background-image: radial-gradient(rgba(225, 29, 72, 0.18) 1px, transparent 0);
+      background-size: 28px 28px;
+    }
+
+    .img-box {
+      background-color: #1e293b;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .img-box img {
+      transition: transform 0.4s ease, opacity 0.3s ease;
+    }
+    
+    .img-box:hover img {
+      transform: scale(1.04);
+    }
+
+    .card-transition {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-transition:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.09), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    }
+  
+    /* 上海官方街道路牌：東西向藍底白字 / 南北向綠底白字 */
+    .sh-sign-ew {
+      background-color: #005bac;
+      color: #ffffff;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, monospace, sans-serif;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      border-radius: 4px;
+      padding: 1px 7px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #004080;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+    }
+
+    .sh-sign-ns {
+      background-color: #007b43;
+      color: #ffffff;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, monospace, sans-serif;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      border-radius: 4px;
+      padding: 1px 7px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #00552b;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+    }
+    
+    /* 上海地鐵官方線路彩色標籤 */
+    .metro-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-weight: 800;
+      border-radius: 6px;
+      padding: 2px 7px;
+      font-size: 0.72rem;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .m-l1  { background: #ffebee; color: #c62828; border: 1px solid #ef9a9a; } /* 1號線 紅色 */
+    .m-l2  { background: #f1f8e9; color: #33691e; border: 1px solid #aed581; } /* 2號線 淺綠 */
+    .m-l4  { background: #ede7f6; color: #4a148c; border: 1px solid #b39ddb; } /* 4號線 紫色 */
+    .m-l7  { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80; } /* 7號線 橙色 */
+    .m-l8  { background: #e1f5fe; color: #01579b; border: 1px solid #81d4fa; } /* 8號線 藍色 */
+    .m-l9  { background: #e0f7fa; color: #006064; border: 1px solid #80deea; } /* 9號線 淡藍 */
+    .m-l10 { background: #f3e5f5; color: #6a1b9a; border: 1px solid #ce93d8; } /* 10號線 淡紫 */
+    .m-l11 { background: #fbe9e7; color: #bf360c; border: 1px solid #ffab91; } /* 11號線 棕褐 */
+    .m-l12 { background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; } /* 12號線 深綠 */
+    .m-l13 { background: #fce4ec; color: #880e4f; border: 1px solid #f48fb1; } /* 13號線 粉紅 */
+    .m-l14 { background: #f0f4c3; color: #558b2f; border: 1px solid #c5e1a5; } /* 14號線 橄欖綠 */
+    .m-l17 { background: #efebe9; color: #4e342e; border: 1px solid #bcaaa4; } /* 17號線 青浦銅棕 */
+    .m-mag { background: #e0f2f1; color: #004d40; border: 1px solid #80cbc4; } /* 磁浮線 青碧 */
+    .m-fer { background: #e0f2fe; color: #0369a1; border: 1px solid #7dd3fc; } /* 渡輪 天藍 */
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-rose-500 selection:text-white pb-16 sm:pb-0">
+
+  <!-- ==================== 頂部導航列 ==================== -->
+  <header class="sticky top-0 z-50 glass-nav border-b border-slate-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <span class="text-2xl sm:text-3xl transform group-hover:scale-110 transition-transform">🏮</span>
+        <div>
+          <span class="font-extrabold text-sm sm:text-base tracking-tight block text-white group-hover:text-rose-400 transition-colors">上海 5D4N 極致自由行</span>
+          <span class="text-[10px] text-slate-400 block tracking-wider font-mono">SHANGHAI FIELD TRAVEL GUIDE 2026</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-300">
+        <a href="#transit-decoder" class="hover:text-rose-400 transition-colors">🚇 地鐵路網速查</a>
+        <a href="#wayfinding-guide" class="hover:text-rose-400 transition-colors">🪧 路牌解碼</a>
+        <a href="#overview" class="hover:text-rose-400 transition-colors">🗓️ 行程矩陣</a>
+        <a href="#itinerary" class="hover:text-rose-400 transition-colors">🗺️ 每日詳細路徑</a>
+        <a href="#gourmet-matrix" class="hover:text-rose-400 transition-colors">🥟 30大美食圖鑑</a>
+        <a href="#souvenirs" class="hover:text-rose-400 transition-colors">🎁 四大必買伴手禮</a>
+        <a href="#reservations" class="hover:text-rose-400 transition-colors">🎫 預約須知</a>
+      </nav>
+      <div class="flex items-center gap-2.5">
+        <a href="./上海五天四夜旅遊詳細攻略.pdf" download class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold transition-colors shadow-sm shadow-rose-900/30">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          <span class="hidden sm:inline">下載離線</span> PDF
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 主視覺 Hero Banner ==================== -->
+  <section class="hero-pattern text-white py-14 sm:py-20 border-b border-slate-800 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="px-2.5 py-1 rounded-full text-xs font-extrabold bg-rose-500/20 text-rose-300 border border-rose-500/30">
+          ✨ 2026 最新官方路網與實證驗證
+        </span>
+        <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700">
+          首選名店 ✕ 超強應急備案 ✕ 5維度無死角認路
+        </span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight mb-4">
+        上海五天四夜極致自由行<br class="hidden sm:inline">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-amber-300 to-teal-300">
+          全地標・海派老洋房・水鄉古鎮・30大本幫名點
+        </span>
+      </h1>
+      <p class="text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed mb-8">
+        專為追求高效率、不走冤枉路與不踩雷的旅行者量身打造。整合上海地鐵全路網官方配色與精準出口、南北向綠牌與東西向藍牌雙向認路、首選老字號與排隊應急備案機制，外加朱家角水鄉與上博東館新展，一鍵搞定黃金五日旅程。
+      </p>
+
+      <!-- 快速核心指標卡片 -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl">
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3 sm:p-4 backdrop-blur-sm">
+          <span class="text-[11px] text-slate-400 block font-bold uppercase tracking-wider">最佳時間安排</span>
+          <span class="text-base sm:text-lg font-black text-rose-400">5 天 4 夜</span>
+          <span class="text-[11px] text-slate-400 block mt-0.5">早去晚回 / 極致順路不折返</span>
+        </div>
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3 sm:p-4 backdrop-blur-sm">
+          <span class="text-[11px] text-slate-400 block font-bold uppercase tracking-wider">景點與美食覆蓋</span>
+          <span class="text-base sm:text-lg font-black text-amber-300">30 景點 ✕ 30 美食</span>
+          <span class="text-[11px] text-slate-400 block mt-0.5">每餐標配同區應急備案</span>
+        </div>
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3 sm:p-4 backdrop-blur-sm">
+          <span class="text-[11px] text-slate-400 block font-bold uppercase tracking-wider">出行與支付必備</span>
+          <span class="text-base sm:text-lg font-black text-teal-300">支付寶 / 微信</span>
+          <span class="text-[11px] text-slate-400 block mt-0.5">上海公共交通乘車碼</span>
+        </div>
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3 sm:p-4 backdrop-blur-sm">
+          <span class="text-[11px] text-slate-400 block font-bold uppercase tracking-wider">機場快速通達</span>
+          <span class="text-base sm:text-lg font-black text-blue-400">磁浮 7 分鐘</span>
+          <span class="text-[11px] text-slate-400 block mt-0.5">憑機票享 8 折 (40元)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 模組 1：行前準備與支付出行實戰指引 ==================== -->
+  <section class="py-10 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-9 h-9 rounded-xl bg-rose-600 text-white flex items-center justify-center font-bold text-base shadow-sm">
+          📱
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">行前必備 4 大錦囊：支付、地圖、預約與乘車碼</h2>
+          <p class="text-xs sm:text-sm text-slate-500">出發前花 10 分鐘設定，入境落地無縫掃碼出關，零現金暢行上海</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-extrabold text-slate-900 text-sm">1. 行動支付與綁卡</span>
+            <span class="px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-bold text-[10px]">必做</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed">
+            下載<strong>【支付寶 (Alipay)】</strong>或<strong>【微信支付】</strong>，綁定台灣/國際信用卡（VISA / Master / JCB）與台胞證實名認證。單筆 200 人民幣以下免手續費，全上海 99.9% 店家、計程車與路邊攤皆可掃碼。
+          </p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-extrabold text-slate-900 text-sm">2. 上海地鐵與公車乘車碼</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-[10px]">一碼全通</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed">
+            在支付寶首頁搜尋「<strong>上海公共交通乘車碼</strong>」領取開通，免買實體交通卡；或下載<strong>【Metro大都會】APP</strong>。進出地鐵閘機與公車只需出示 QR Code 刷碼，過閘極速且自動扣款。
+          </p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-extrabold text-slate-900 text-sm">3. 導航與美食排隊神器</span>
+            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold text-[10px]">地圖實測</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed">
+            強烈推薦<strong>【高德地圖】</strong>，路徑精確到地鐵車廂號與出口手扶梯；美食必備<strong>【大眾點評】</strong>，可查詢門市即時營業狀況、線上排號取號（如人和館、老吉士）及超值雙人套餐。
+          </p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-extrabold text-slate-900 text-sm">4. 重磅景點實名預約制</span>
+            <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold text-[10px]">提早預約</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed">
+            <strong>上海博物館 (人民廣場/東館)</strong> 須提前 7 天於微信小程式預約（免費）；<strong>朵雲書院·旗艦店 (上海中心52F)</strong> 須提前於微信「世紀朵雲」預約景觀時段；豫園建議提早購票免排長隊。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 模組 2：上海地鐵全路網官方色彩速查碼 ==================== -->
+  <section id="transit-decoder" class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center gap-3 mb-6">
+      <div class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-base shadow-sm">
+        🚇
+      </div>
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">上海地鐵全路網官方色彩與核心樞紐速查</h2>
+        <p class="text-xs sm:text-sm text-slate-500">出站轉乘、辨識車身塗裝與指標色塊，一眼秒懂不混淆</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-xs">
+      <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="metro-pill m-l1">1號線</span>
+          <span class="font-bold text-red-600 font-mono">Scarlet</span>
+        </div>
+        <p class="text-[11px] text-slate-600">人民廣場、黃陂南路、上海火車站、徐家匯</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="metro-pill m-l2">2號線</span>
+          <span class="font-bold text-emerald-600 font-mono">Green</span>
+        </div>
+        <p class="text-[11px] text-slate-600">虹橋機場/火車站、南京東路、陸家嘴、浦東機場</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="metro-pill m-l8">8號線</span>
+          <span class="font-bold text-sky-600 font-mono">Blue</span>
+        </div>
+        <p class="text-[11px] text-slate-600">人民廣場、大世界、曲阜路（四行倉庫）、中華藝術宮</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="metro-pill m-l10">10號線</span>
+          <span class="font-bold text-purple-600 font-mono">Lavender</span>
+        </div>
+        <p class="text-[11px] text-slate-600">交通大學（武康路）、新天地、豫園、南京東路</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="metro-pill m-l12">12號線</span>
+          <span class="font-bold text-emerald-800 font-mono">Dark Green</span>
+        </div>
+        <p class="text-[11px] text-slate-600">陝西南路、曲阜路、國際客運中心（北外灘濱江）</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="metro-pill m-l14">14號線</span>
+          <span class="font-bold text-lime-700 font-mono">Olive</span>
+        </div>
+        <p class="text-[11px] text-slate-600">靜安寺、一大会址·黄陂南路、豫園、陸家嘴</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="metro-pill m-l9">9號線</span>
+          <span class="font-bold text-cyan-600 font-mono">Sky Blue</span>
+        </div>
+        <p class="text-[11px] text-slate-600">打浦橋（田子坊）、肇嘉浜路、徐家匯、世紀大道</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="metro-pill m-l17">17號線</span>
+          <span class="font-bold text-amber-800 font-mono">Bronze</span>
+        </div>
+        <p class="text-[11px] text-slate-600">虹橋火車站直達朱家角水鄉古鎮（青浦線）</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="metro-pill m-l7">7號線</span>
+          <span class="font-bold text-orange-600 font-mono">Orange</span>
+        </div>
+        <p class="text-[11px] text-slate-600">靜安寺、常熟路（巨富長）、龍華中路（徐匯濱江）</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="metro-pill m-l13">13號線</span>
+          <span class="font-bold text-pink-600 font-mono">Rose Pink</span>
+        </div>
+        <p class="text-[11px] text-slate-600">新天地、淮海中路、南京西路、自然博物館</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="metro-pill m-mag">磁浮線</span>
+          <span class="font-bold text-teal-700 font-mono">Maglev</span>
+        </div>
+        <p class="text-[11px] text-slate-600">龍陽路 ➔ 浦東機場，時速 300-430 km/h，7 分鐘</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="metro-pill m-fer">東金線渡輪</span>
+          <span class="font-bold text-sky-700 font-mono">Ferry</span>
+        </div>
+        <p class="text-[11px] text-slate-600">金陵東路渡口 ➔ 東昌路渡口，刷碼 2 元橫渡黃浦江</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 模組 3：上海官方路牌雙向解碼 ==================== -->
+  <section id="wayfinding-guide" class="py-8 bg-slate-900 text-white border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+        <div>
+          <span class="text-xs font-bold text-rose-400 tracking-wider uppercase block mb-1">Authentic Local Wayfinding</span>
+          <h2 class="text-xl sm:text-2xl font-black text-white">上海實體街道路牌解碼：看顏色即知方向</h2>
+        </div>
+        <div class="text-xs text-slate-400 max-w-lg">
+          在上海市區行走，只要抬頭看路牌底色，即使不用看指南針也能精準辨識方向：
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+        <div class="bg-slate-800/80 border border-blue-500/30 rounded-xl p-4 flex items-start gap-4">
+          <div class="sh-sign-ew text-sm font-black px-3 py-1.5 shrink-0">
+            東西向路牌 ➔ 藍底白字
+          </div>
+          <div class="space-y-1 text-slate-300">
+            <div class="font-bold text-white text-sm">例：<span class="font-mono">[ 淮海中路 HUAIHAI RD.(M) ]</span> / <span class="font-mono">[ 南京東路 EAST NANJING RD. ]</span></div>
+            <p class="text-[11px] leading-relaxed">
+              所有東西走向的幹道（如南京路、淮海路、延安路、復興路、世紀大道）路牌均為<strong>深藍色底白字</strong>，兩端標記「東 E」與「西 W」。
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/80 border border-emerald-500/30 rounded-xl p-4 flex items-start gap-4">
+          <div class="sh-sign-ns text-sm font-black px-3 py-1.5 shrink-0">
+            南北向路牌 ➔ 綠底白字
+          </div>
+          <div class="space-y-1 text-slate-300">
+            <div class="font-bold text-white text-sm">例：<span class="font-mono">[ 武康路 WUKANG RD. ]</span> / <span class="font-mono">[ 四川中路 SICHUAN RD.(M) ]</span></div>
+            <p class="text-[11px] leading-relaxed">
+              所有南北走向的街道（如西藏路、四川路、武康路、思南路、富民路、中山路）路牌均為<strong>深綠色底白字</strong>，兩端標記「南 S」與「北 N」。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 模組 4：行程概覽矩陣 (Overview Matrix) ==================== -->
+  <section id="overview" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between mb-6">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">5 天 4 夜 行程矩陣總覽表</h2>
+        <p class="text-xs sm:text-sm text-slate-500">主軸線路、核心地標、主力通勤地鐵與首選美食對照</p>
+      </div>
+    </div>
+
+    <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white font-bold border-b border-slate-800">
+              <th class="py-3.5 px-4 sm:px-6 w-20">天數</th>
+              <th class="py-3.5 px-4 sm:px-6">主題與區域核心</th>
+              <th class="py-3.5 px-4 sm:px-6">核心景點串聯</th>
+              <th class="py-3.5 px-4 sm:px-6">主力通勤地鐵/輪渡</th>
+              <th class="py-3.5 px-4 sm:px-6">首選招牌名店</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-extrabold text-rose-600">DAY 1</td>
+              <td class="py-4 px-4 sm:px-6 font-bold text-slate-900">
+                經典海派地標與浦江兩岸天際線
+                <span class="block text-[11px] text-slate-500 font-normal">黃浦江兩岸・外灘 ✕ 陸家嘴</span>
+              </td>
+              <td class="py-4 px-4 sm:px-6 text-slate-700">人民廣場 ➔ 南京路步行街 ➔ 豫園九曲橋 ➔ 外灘萬國建築 ➔ 乍浦路橋機位 ➔ 陸家嘴三件套 ➔ 朵雲書院</td>
+              <td class="py-4 px-4 sm:px-6">
+                <div class="flex flex-wrap gap-1">
+                  <span class="metro-pill m-l2">2號線</span>
+                  <span class="metro-pill m-l10">10號線</span>
+                  <span class="metro-pill m-fer">東金線輪渡</span>
+                </div>
+              </td>
+              <td class="py-4 px-4 sm:px-6 font-semibold text-rose-700">大壺春生煎、南翔饅頭店小籠包、成隆行蟹王府蟹宴</td>
+            </tr>
+
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-extrabold text-rose-600">DAY 2</td>
+              <td class="py-4 px-4 sm:px-6 font-bold text-slate-900">
+                梧桐法租界慢調、老洋房與潮流街區
+                <span class="block text-[11px] text-slate-500 font-normal">衡復風貌區・武康 ✕ 新天地</span>
+              </td>
+              <td class="py-4 px-4 sm:px-6 text-slate-700">武康大樓 ➔ 武康路歷史街區 ➔ 安福路話劇藝術街 ➔ 思南公館洋房群 ➔ 新天地石庫門</td>
+              <td class="py-4 px-4 sm:px-6">
+                <div class="flex flex-wrap gap-1">
+                  <span class="metro-pill m-l10">10號線</span>
+                  <span class="metro-pill m-l11">11號線</span>
+                  <span class="metro-pill m-l13">13號線</span>
+                  <span class="metro-pill m-l1">1號線</span>
+                </div>
+              </td>
+              <td class="py-4 px-4 sm:px-6 font-semibold text-rose-700">白玉蘭大燒賣、老吉士本幫菜、光明邨鮮肉月餅、蘭心餐廳</td>
+            </tr>
+
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-extrabold text-rose-600">DAY 3</td>
+              <td class="py-4 px-4 sm:px-6 font-bold text-slate-900">
+                文博藝術、蘇州河記憶與都市魔幻
+                <span class="block text-[11px] text-slate-500 font-normal">人文深度・文博 ✕ 蘇州河 ✕ 靜安</span>
+              </td>
+              <td class="py-4 px-4 sm:px-6 text-slate-700">雲南南路早點 ➔ 上海博物館(東館/人民廣場) ➔ 蘇州河畔漫步 ➔ 四行倉庫抗戰舊址 ➔ 1933老場坊 ➔ 靜安寺璀璨夜景</td>
+              <td class="py-4 px-4 sm:px-6">
+                <div class="flex flex-wrap gap-1">
+                  <span class="metro-pill m-l8">8號線</span>
+                  <span class="metro-pill m-l12">12號線</span>
+                  <span class="metro-pill m-l2">2號線</span>
+                  <span class="metro-pill m-l14">14號線</span>
+                </div>
+              </td>
+              <td class="py-4 px-4 sm:px-6 font-semibold text-rose-700">鮮得來排骨年糕、老半齋刀魚煨麵、人和館金牌脆皮雞</td>
+            </tr>
+
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-extrabold text-rose-600">DAY 4</td>
+              <td class="py-4 px-4 sm:px-6 font-bold text-slate-900">
+                江南水鄉古鎮風情與濱江現代藝術
+                <span class="block text-[11px] text-slate-500 font-normal">江南水鄉 ✕ 西岸美術館大道</span>
+              </td>
+              <td class="py-4 px-4 sm:px-6 text-slate-700">朱家角水鄉古鎮（放生橋/課植園/搖快船） ➔ 徐匯濱江西岸美術館大道 ➔ 油罐藝術公園 ➔ 浦東美術館(MAP)鏡廳夕陽 / 北外灘夜景</td>
+              <td class="py-4 px-4 sm:px-6">
+                <div class="flex flex-wrap gap-1">
+                  <span class="metro-pill m-l17">17號線</span>
+                  <span class="metro-pill m-l10">10號線</span>
+                  <span class="metro-pill m-l12">12號線</span>
+                  <span class="metro-pill m-l14">14號線</span>
+                </div>
+              </td>
+              <td class="py-4 px-4 sm:px-6 font-semibold text-rose-700">茂源飯店水鄉白水魚扎肉、西岸江景咖啡、小紹興白斬雞</td>
+            </tr>
+
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-extrabold text-rose-600">DAY 5</td>
+              <td class="py-4 px-4 sm:px-6 font-bold text-slate-900">
+                石庫門文創弄堂、愚園路漫步與伴手禮採買
+                <span class="block text-[11px] text-slate-500 font-normal">弄堂市井 ✕ 四大天王名產 ➔ 返程</span>
+              </td>
+              <td class="py-4 px-4 sm:px-6 text-slate-700">田子坊石庫門 ➔ 巨富長本幫菜 ➔ 愚園路慢行街區 ➔ 國際飯店蝴蝶酥等四大老字號採買 ➔ 虹橋/浦東磁浮返程</td>
+              <td class="py-4 px-4 sm:px-6">
+                <div class="flex flex-wrap gap-1">
+                  <span class="metro-pill m-l9">9號線</span>
+                  <span class="metro-pill m-l7">7號線</span>
+                  <span class="metro-pill m-l2">2號線</span>
+                  <span class="metro-pill m-mag">磁浮線</span>
+                </div>
+              </td>
+              <td class="py-4 px-4 sm:px-6 font-semibold text-rose-700">王家沙蟹粉小籠、保羅酒樓瑞士牛排、國際飯店蝴蝶酥</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 模組 5：每日詳細動線與實景導航 (Daily Itinerary) ==================== -->
+  <section id="itinerary" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+      <div>
+        <div class="flex items-center gap-2 text-rose-600 text-xs font-bold uppercase tracking-wider mb-1">
+          <span>Field Wayfinding &amp; Zero Ambiguity</span>
+          <span>•</span>
+          <span>Dual-Plan Dining</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">每日行程・5大維度實景識別與精準導航</h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">包含地鐵線路/代碼、出站指標文字、實體路牌底色、官方門牌、抬頭肉眼地標、首選名店與超強備案</p>
+      </div>
+
+      <!-- 天數過濾頁籤 -->
+      <div class="flex items-center bg-slate-200/80 p-1 rounded-xl gap-1 shrink-0 overflow-x-auto max-w-full">
+        <button onclick="filterDay('all')" class="day-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-900 shadow-sm transition-all whitespace-nowrap" data-target="all">全部天數</button>
+        <button onclick="filterDay('d1')" class="day-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 transition-all whitespace-nowrap" data-target="d1">Day 1</button>
+        <button onclick="filterDay('d2')" class="day-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 transition-all whitespace-nowrap" data-target="d2">Day 2</button>
+        <button onclick="filterDay('d3')" class="day-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 transition-all whitespace-nowrap" data-target="d3">Day 3</button>
+        <button onclick="filterDay('d4')" class="day-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 transition-all whitespace-nowrap" data-target="d4">Day 4</button>
+        <button onclick="filterDay('d5')" class="day-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 transition-all whitespace-nowrap" data-target="d5">Day 5</button>
+      </div>
+    </div>
+
+    <!-- ==================== DAY 1 ==================== -->
+    <div id="card-d1" class="day-section bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm mb-10 card-transition">
+      <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white p-5 sm:p-6 flex flex-wrap items-center justify-between gap-3 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <span class="px-3 py-1 rounded-lg bg-rose-600 text-white text-xs font-black tracking-wider uppercase">DAY 1</span>
+          <div>
+            <h3 class="text-base sm:text-lg font-bold">經典海派地標與黃浦江兩岸天際線</h3>
+            <span class="text-xs text-slate-400">人民廣場 ➔ 南京東路 ➔ 豫園老街 ➔ 外灘萬國建築 ➔ 東金線輪渡 ➔ 陸家嘴三件套</span>
+          </div>
+        </div>
+        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-rose-300 border border-slate-700">
+          經典雙面上海初體驗
+        </span>
+      </div>
+
+      <div class="p-6 space-y-8">
+        <!-- Spot 1.1: 人民廣場 & 南京路步行街 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pb-8 border-b border-slate-100">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1200&q=80" 
+                   alt="南京路步行街實景" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：百年歐風老街</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">09:00 - 11:30</span>
+                  <h4 class="text-base font-bold text-slate-900">【人民廣場 &amp; 南京路步行街】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Nanjing+Road+Pedestrian+Street+Shanghai" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                抵達上海市中心原點。由人民廣場向東踏上全長 1.5 公里的「中華商業第一街」。兩側矗立永安百貨、第一百貨、老介福與和平飯店等百年巴洛克歐風建築，街頭叮噹觀光車穿梭，是領略上海近代繁華的最佳起點。
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 地鐵路線：</span>
+                  <span class="metro-pill m-l1">1號線</span> <span class="metro-pill m-l2">2號線</span> <span class="metro-pill m-l8">8號線</span> <span class="font-mono font-bold text-amber-300">人民廣場站 [People's Square]</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                    <span class="text-slate-200">由 <strong>19號口</strong> 出站，抬頭跟隨指標「南京路步行街 / 西藏中路」，出站直通步行街西首起點。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ew text-[10px]">南京東路 EAST NANJING RD.</span>
+                    <span class="sh-sign-ns text-[10px] ml-1">西藏中路 TIBET RD.(M)</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">黃浦區南京東路（西起西藏中路）</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                  <span>出 19 號口正前方即為第一百貨巨型立面，紅磚鋪石步行街寬敞無車輛干擾；若從 2/10號線南京東路站出發，則從 1/4號口出站。</span>
+                </div>
+              </div>
+
+              <!-- 美食雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">首選名店</span>
+                  <strong class="text-slate-900">大壺春 (四川中路旗艦店)</strong>
+                  <span class="text-slate-500 font-mono">黃浦區四川中路136號</span>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>招牌必吃：</strong> 清水生煎包（焦脆底、微發麵不爆汁、濃油赤醬鮮肉）、咖哩牛肉湯、小餛飩。
+                </div>
+                <div class="pt-1 border-t border-rose-200/60 text-slate-600 pl-2 text-[11px]">
+                  <span class="text-rose-700 font-bold">備案選擇：</span>
+                  【備案1】小楊生煎 (第一食品店3F，南京東路720號，薄皮爆汁大蝦生煎) ｜ 【備案2】泰康食品 (南京東路353號，現烤酥皮鮮肉月餅)。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 1.2: 豫園老街商圈 & 城隍廟 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pb-8 border-b border-slate-100">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1543731068-7e0f5beff43a?auto=format&fit=crop&w=1200&q=80" 
+                   alt="豫園九曲橋實景" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：明代江南古典名園</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">11:30 - 16:30</span>
+                  <h4 class="text-base font-bold text-slate-900">【豫園 &amp; 城隍廟商圈・九曲橋畔】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Yu+Garden+Shanghai" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                建於明代嘉靖年間的江南私家古典園林，擁有 400 多年歷史。園內假山亭榭、古樹奇石林立，必賞「大假山」與江南三大名石之一的「玉玲瓏」。園外為飛簷翹角的明清仿古商城，九曲橋蜿蜒池上，湖心亭茶樓古色古香。
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 地鐵路線：</span>
+                  <span class="metro-pill m-l10">10號線</span> <span class="metro-pill m-l14">14號線</span> <span class="font-mono font-bold text-amber-300">豫園站 [Yuyuan Garden]</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                    <span class="text-slate-200">由 <strong>7號口</strong> 出站，出站沿福佑路一路向東步行約 400 公尺即抵豫園老街核心區。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ew text-[10px]">福佑路 FUYOU RD.</span>
+                    <span class="sh-sign-ns text-[10px] ml-1">安仁街 ANREN ST.</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">黃浦區安仁街218號（豫園正門）；福佑路168號（商圈）</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                  <span>入商城後抬頭認明紅木金字「九曲橋」指標，南翔饅頭店即座落於九曲橋轉角正中心；豫園景區檢票口緊鄰九曲橋北岸。</span>
+                </div>
+              </div>
+
+              <!-- 美食雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">首選名店</span>
+                  <strong class="text-slate-900">南翔饅頭店 (豫園旗艦店)</strong>
+                  <span class="text-slate-500 font-mono">豫園老街87號(九曲橋畔)</span>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>招牌必吃：</strong> 傳統手工鮮肉小籠包、蟹黃灌湯包（吸管吸湯）、蟹粉小籠、清燉蟹粉獅子頭。
+                </div>
+                <div class="pt-1 border-t border-rose-200/60 text-slate-600 pl-2 text-[11px]">
+                  <span class="text-rose-700 font-bold">備案選擇：</span>
+                  【備案1】上海老飯店 (福佑路242號，百年老字號本幫油爆蝦、金牌八寶鴨) ｜ 【備案2】春風松月樓 (舊校場路99號，百年素菜包、海棠糕) ｜ 【點心】寧波湯糰店 (黑洋酥芝麻湯糰)。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 1.3: 外灘萬國建築博覽群 & 乍浦路橋 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pb-8 border-b border-slate-100">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1200&q=80" 
+                   alt="外灘與陸家嘴天際線實景" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：萬國建築群與對岸東方明珠</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">17:00 - 19:30</span>
+                  <h4 class="text-base font-bold text-slate-900">【外灘萬國建築群 &amp; 乍浦路橋法師機位】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=The+Bund+Shanghai" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                上海最標誌性的金色海堤。西側林立 52 幢哥德式、巴洛克式、羅馬式與裝飾藝術風格歷史建築（和平飯店、上海海關大樓鐘聲長鳴）。傍晚 18:00 亮燈時刻漫步，並往北行至外白渡橋旁的<strong>「乍浦路橋」</strong>，可拍下蘇州河畔郵政博物館與遠處東方明珠同框的經典「法師機位」！
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 地鐵路線：</span>
+                  <span class="metro-pill m-l2">2號線</span> <span class="metro-pill m-l10">10號線</span> <span class="font-mono font-bold text-amber-300">南京東路站 [East Nanjing Rd]</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                    <span class="text-slate-200">由 <strong>2號口</strong> 或 <strong>7號口</strong> 出站，沿南京東路向東步行 600 公尺直抵外灘海堤；或由豫園穿古城公園步行 800 公尺。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ns text-[10px]">中山東一路 ZHONGSHAN RD.(E-1)</span>
+                    <span class="sh-sign-ew text-[10px] ml-1">九江路 JIUJIANG RD.</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">黃浦區中山東一路（外灘景觀步道）；虹口區乍浦路橋</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                  <span>拾級登上寬闊的花崗岩防汛牆景觀平台，視野豁然開朗；外灘亮燈時間夏季約 19:00、春秋季約 18:00，22:00 準時熄燈。</span>
+                </div>
+              </div>
+
+              <!-- 美食雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">首選名店</span>
+                  <strong class="text-slate-900">成隆行蟹王府 (九江路店)</strong>
+                  <span class="text-slate-500 font-mono">黃浦區九江路216號(近外灘)</span>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>招牌必吃：</strong> 禿黃油撈飯（純公蟹膏與母蟹黃淋在熱飯上極致香濃）、清炒蟹粉佐脆餅、太湖熟醉蟹。
+                </div>
+                <div class="pt-1 border-t border-rose-200/60 text-slate-600 pl-2 text-[11px]">
+                  <span class="text-rose-700 font-bold">備案選擇：</span>
+                  【備案1】上海姥姥家常飯館 (福州路70號，平價高分地道濃油赤醬本幫紅燒肉) ｜ 【備案2】申宴 (外灘店，九江路50號精緻本幫融合菜)。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 1.4: 東金線輪渡 ➔ 浦東陸家嘴「三件套」/ 朵雲書院 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80" 
+                   alt="陸家嘴三件套摩天大樓夜景" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：上海中心與陸家嘴夜景</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">19:30 - 22:00</span>
+                  <h4 class="text-base font-bold text-slate-900">【東金線渡輪橫渡 ➔ 陸家嘴「三件套」&amp; 朵雲書院】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Shanghai+Tower+Lujiazui" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                絕不花大錢搭觀光隧道！從外灘金陵東路渡口刷碼 2 元人民幣搭乘<strong>「東金線輪渡」</strong>，站上二層甲板吹著江風橫渡黃浦江，飽覽兩岸百萬夜景。抵達浦東東昌路碼頭後漫步至陸家嘴環形天橋，仰望世界第二高樓上海中心大廈（632m）、環球金融中心與金茂大廈「廚房三件套」。提前預約 52 樓朵雲書院，享受雲端景觀咖啡。
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 通勤路線：</span>
+                  <span class="metro-pill m-fer">東金線輪渡</span> ➔ <span class="metro-pill m-l2">2號線</span> <span class="metro-pill m-l14">14號線</span> <span class="font-mono font-bold text-amber-300">陸家嘴站 [Lujiazui]</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 渡口與出站指標：</span>
+                    <span class="text-slate-200">由外灘沿中山東一路南行至「金陵東路渡口」刷碼登船；抵達浦東「東昌路渡口」後沿東昌路步行約 10 分鐘至陸家嘴環形天橋。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ns text-[10px]">銀城中路 YINCHENG RD.(M)</span>
+                    <span class="sh-sign-ew text-[10px] ml-1">世紀大道 CENTURY AVE.</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">浦東新區銀城中路501號（上海中心大廈）</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                  <span>東金線渡輪每 15 分鐘一班（營運至 22:00）；朵雲書院入口位於上海中心大廈西門辦公大堂，憑微信小程式「世紀朵雲」預約碼搭乘高速電梯直達 52 層。</span>
+                </div>
+              </div>
+
+              <!-- 美食雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">高空休憩</span>
+                  <strong class="text-slate-900">朵雲書院·旗艦店 (上海中心52F) / IFC 國金中心</strong>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>亮點特色：</strong> 離地 239 米的空中景觀花園與書店，低消一杯咖啡即可倚窗俯瞰黃浦江雙向轉彎絕美夜景。
+                </div>
+                <div class="pt-1 border-t border-rose-200/60 text-slate-600 pl-2 text-[11px]">
+                  <span class="text-rose-700 font-bold">備案選擇：</span>
+                  【備案】正大廣場美食街 (濱江景觀餐廳群，望江閣或外婆家，近看外灘全貌)。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== DAY 2 ==================== -->
+    <div id="card-d2" class="day-section bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm mb-10 card-transition">
+      <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white p-5 sm:p-6 flex flex-wrap items-center justify-between gap-3 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <span class="px-3 py-1 rounded-lg bg-rose-600 text-white text-xs font-black tracking-wider uppercase">DAY 2</span>
+          <div>
+            <h3 class="text-base sm:text-lg font-bold">梧桐法租界慢調、老洋房與海派潮流</h3>
+            <span class="text-xs text-slate-400">武康大樓 ➔ 武康路名人街 ➔ 安福路話劇街 ➔ 思南公館洋房群 ➔ 新天地石庫門</span>
+          </div>
+        </div>
+        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-rose-300 border border-slate-700">
+          梧桐樹下的海派文藝
+        </span>
+      </div>
+
+      <div class="p-6 space-y-8">
+        <!-- Spot 2.1: 武康大樓 & 武康路歷史文化街區 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pb-8 border-b border-slate-100">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?auto=format&fit=crop&w=1200&q=80" 
+                   alt="武康大樓與梧桐樹實景" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：鄔達克經典熨斗形老洋房</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">08:30 - 12:00</span>
+                  <h4 class="text-base font-bold text-slate-900">【武康大樓 &amp; 武康路歷史文化街區】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Wukang+Mansion+Shanghai" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                原名諾曼底公寓（Normandie Apartments），由傳奇匈牙利建築師鄔達克於 1924 年設計，是全上海第一座外廊式公寓。紅色磚牆與法式文藝復興風格宛如一艘破浪前進的巨輪。沿武康路向北漫步，法式梧桐綠樹成蔭，沿途經過巴金故居、宋慶齡故居與黃色羅密歐陽台，是衡復風貌區的靈魂所在。
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 地鐵路線：</span>
+                  <span class="metro-pill m-l10">10號線</span> <span class="metro-pill m-l11">11號線</span> <span class="font-mono font-bold text-amber-300">交通大學站 [Jiaotong Univ]</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                    <span class="text-slate-200">由 <strong>7號口</strong> 出站，沿淮海中路東行 350 公尺，直抵淮海中路與天平路、武康路五叉路口。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ew text-[10px]">淮海中路 HUAIHAI RD.(M)</span>
+                    <span class="sh-sign-ns text-[10px] ml-1">武康路 WUKANG RD.</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">徐匯區淮海中路1850號（武康大樓）；武康路113號（巴金故居）</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                  <span>最佳拍照機位在天平路對角線人行道安全島（清晨 09:00 前順光且無大批遊客）；武康路一路向北至安福路全長約 1.1 公里，適合散步或騎共用單車。</span>
+                </div>
+              </div>
+
+              <!-- 美食雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">早午餐首選</span>
+                  <strong class="text-slate-900">白玉蘭麵包房 (天平路總店) / 老吉士酒家 (天平路老店)</strong>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>招牌必吃：</strong> 白玉蘭：巨型爆汁大燒賣（肉粒＋糯米）、白脫小球；老吉士：外婆紅燒肉、蔥油拌麵、酒香草頭。
+                </div>
+                <div class="pt-1 border-t border-rose-200/60 text-slate-600 pl-2 text-[11px]">
+                  <span class="text-rose-700 font-bold">備案選擇：</span>
+                  【備案1】建國328小館 (建國西路328號，少油無味精傳統本幫蔥油拌麵/醬鴨) ｜ 【備案2】弄堂咪道四大金剛 (淮海路沿線大餅、油條、粢飯糰、鹹豆漿)。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 2.2: 安福路潮流文藝街區 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pb-8 border-b border-slate-100">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" 
+                   alt="安福路街角與文藝店面實景" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：潮流買手店與法式街角</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">13:00 - 15:00</span>
+                  <h4 class="text-base font-bold text-slate-900">【安福路潮流文藝街區】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Anfu+Road+Shanghai" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                上海公認最具「網紅元氣」與當代時尚生活風格的街區。全長約 800 公尺，聚集了上海話劇藝術中心、三頓半原點店、HARMAY 話梅倉儲美妝、Sunflour 法式烘焙與各具特色的獨立設計買手店，處處都是街拍模特兒與悠閒品味咖啡的座席。
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 地鐵路線：</span>
+                  <span class="metro-pill m-l1">1號線</span> <span class="metro-pill m-l7">7號線</span> <span class="font-mono font-bold text-amber-300">常熟路站 [Changshu Rd]</span> 或沿武康路向北步行
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                    <span class="text-slate-200">由 <strong>8號口</strong> 出站沿常熟路北行至安福路口左轉；或由武康路北端直達。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ew text-[10px]">安福路 ANFU RD.</span>
+                    <span class="sh-sign-ns text-[10px] ml-1">武康路 WUKANG RD.</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">徐匯區安福路288號（話劇藝術中心）；安福路308號（Sunflour）</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                  <span>街道狹窄單行，人流密集；推薦在 RAC BAR 或 Sunflour 臨街高腳椅點一杯澳白或可麗餅，看人看街極度愜意。</span>
+                </div>
+              </div>
+
+              <!-- 美食雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">下午茶首選</span>
+                  <strong class="text-slate-900">Sunflour (安福路店) / RAC BAR (安福路322號)</strong>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>招牌必吃：</strong> Sunflour：太陽海鹽羊角麵包（海鹽奶油香極濃郁酥脆）；RAC BAR：法式蕎麥可麗餅、牛油果吐司。
+                </div>
+                <div class="pt-1 border-t border-rose-200/60 text-slate-600 pl-2 text-[11px]">
+                  <span class="text-rose-700 font-bold">備案選擇：</span>
+                  【備案1】BADMARKET (安福路280號，三層潮流文創咖啡) ｜ 【備案2】LOKAL by Wagas (武康路202號，綠意庭院早午餐)。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 2.3: 思南公館 & 新天地石庫門 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80" 
+                   alt="新天地石庫門夜色與酒吧實景" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：新天地石庫門文創街區</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">15:30 - 21:30</span>
+                  <h4 class="text-base font-bold text-slate-900">【思南公館洋房群 ➔ 新天地石庫門酒吧街】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Xintiandi+Shanghai" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                午後轉往思南路，欣賞上海保存最完整的 51 棟法式花園洋房群與周公館、思南書局。傍晚步行至<strong>新天地</strong>，感受由傳統石庫門弄堂與清水磚牆改造的高端文創街區。入夜後露天歐陸酒吧街燭光搖曳、爵士樂流淌，完美展現上海獨一無二的摩登夜生活。
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 地鐵路線：</span>
+                  <span class="metro-pill m-l10">10號線</span> <span class="metro-pill m-l13">13號線</span> <span class="font-mono font-bold text-amber-300">一大会址·新天地站 [Xintiandi]</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                    <span class="text-slate-200">由 <strong>6號口</strong> 出站即達新天地南里；若由思南公館前往，沿復興中路向東步行 700 公尺直達。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ew text-[10px]">太倉路 TAICANG RD.</span>
+                    <span class="sh-sign-ns text-[10px] ml-1">馬當路 MADANG RD.</span>
+                    <span class="sh-sign-ns text-[10px] ml-1">思南路 SINAN RD.</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">黃浦區思南路53號（思南公館）；太倉路181弄（新天地北里）</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                  <span>新天地北里保留老石庫門門樓雕飾與木質烏漆大門，南里為玻璃現代商場；思南書局·詩歌店（皋蘭路16號）由東正教堂改建，穹頂壁畫極美。</span>
+                </div>
+              </div>
+
+              <!-- 美食雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">晚餐首選</span>
+                  <strong class="text-slate-900">蘭心餐廳 (進賢路店) / 光明邨大酒家 (淮海中路店)</strong>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>招牌必吃：</strong> 蘭心餐廳：本幫紅燒肉、草頭圈子、油爆蝦；光明邨：現烤鮮肉月餅、本幫醬鴨。
+                </div>
+                <div class="pt-1 border-t border-rose-200/60 text-slate-600 pl-2 text-[11px]">
+                  <span class="text-rose-700 font-bold">備案選擇：</span>
+                  【備案1】海金滋 (進賢路240號，米其林必比登：蔥油肉絲麻醬麵、糖醋小排) ｜ 【備案2】新吉士酒家 (新天地北里9號，石庫門花園精緻本幫菜) ｜ 【茶點】查餐廳 (思南路30-4號老牌港式冰室菠蘿油)。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== DAY 3 ==================== -->
+    <div id="card-d3" class="day-section bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm mb-10 card-transition">
+      <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white p-5 sm:p-6 flex flex-wrap items-center justify-between gap-3 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <span class="px-3 py-1 rounded-lg bg-rose-600 text-white text-xs font-black tracking-wider uppercase">DAY 3</span>
+          <div>
+            <h3 class="text-base sm:text-lg font-bold">文博藝術、蘇州河抗戰記憶與都市魔幻</h3>
+            <span class="text-xs text-slate-400">雲南南路老字號早點 ➔ 上海博物館 ➔ 蘇州河畔/四行倉庫 ➔ 1933老場坊 ➔ 靜安寺夜色</span>
+          </div>
+        </div>
+        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-rose-300 border border-slate-700">
+          歷史厚度與建築奇觀
+        </span>
+      </div>
+
+      <div class="p-6 space-y-8">
+        <!-- Spot 3.1: 雲南南路美食街 ➔ 上海博物館 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pb-8 border-b border-slate-100">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?auto=format&fit=crop&w=1200&q=80" 
+                   alt="上海博物館與古代珍寶展" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：中國頂級青銅與古代藝術殿堂</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">08:30 - 12:00</span>
+                  <h4 class="text-base font-bold text-slate-900">【雲南南路早點 ➔ 上海博物館 (東館 / 人民廣場館)】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Shanghai+Museum" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                清晨先至雲南南路品嚐傳奇名吃<strong>「鮮得來排骨年糕」</strong>，外酥內嫩的豬排淋上經典泰康黃牌辣醬油，滋味一絕。隨後參觀<strong>上海博物館</strong>。特別提示：2024-2026 年上博於浦東世紀大道的<strong>「上博東館」</strong>已全面開放，集中展出全中國頂級的中國古代青銅館、古代陶瓷館與歷代書畫館；人民廣場館則持續展出重磅全球文明特展，均需提前 7 天預約。
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 地鐵路線：</span>
+                  <span class="metro-pill m-l8">8號線</span> <span class="metro-pill m-l14">14號線</span> <span class="font-mono font-bold text-amber-300">大世界站 [Dashijie]</span> ➔ 人民廣場館 / 或 2號線至上海科技館站 (東館)
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                    <span class="text-slate-200">大世界站 <strong>2號口</strong> 步行 200 米抵鮮得來；人民廣場館由人民廣場站 <strong>1號口</strong> 步行 3 分鐘。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ns text-[10px]">雲南南路 YUNNAN RD.(S)</span>
+                    <span class="sh-sign-ew text-[10px] ml-1">人民大道 RENMIN AVE.</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">黃浦區雲南南路46號（鮮得來）；黃浦區人民大道201號（上博人民廣場館）</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                  <span>上博門票免費，但每逢週一閉館（法定節假日除外），參觀須提前在微信搜尋「上海博物館」實名預約並攜帶台胞證正本。</span>
+                </div>
+              </div>
+
+              <!-- 美食雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">早午餐首選</span>
+                  <strong class="text-slate-900">鮮得來排骨年糕 (雲南南路總店) / 老半齋 (福州路店)</strong>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>招牌必吃：</strong> 鮮得來：排骨年糕佐泰康黃牌辣醬油、雙檔湯；老半齋：百年淮揚刀魚汁煨麵、水晶餚肉、糟白魚。
+                </div>
+                <div class="pt-1 border-t border-rose-200/60 text-slate-600 pl-2 text-[11px]">
+                  <span class="text-rose-700 font-bold">備案選擇：</span>
+                  【備案1】小金陵鹽水鴨店 (雲南南路55號，鹽水鴨、老鴨粉絲湯) ｜ 【備案2】德興館 (廣東路471號百年燜蹄麵、爆魚麵) ｜ 【備案3】王寶和酒家 (福州路603號蟹粉小籠)。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 3.2: 蘇州河畔漫步 & 四行倉庫抗戰紀念館 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pb-8 border-b border-slate-100">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1200&q=80" 
+                   alt="四行倉庫彈孔西牆與蘇州河畔實景" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：震撼彈孔西牆與蘇州河步道</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">13:00 - 15:00</span>
+                  <h4 class="text-base font-bold text-slate-900">【蘇州河畔漫步 &amp; 四行倉庫抗戰紀念館】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Sihang+Warehouse+Memorial+Shanghai" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                走進 1937 年淞滬會戰歷史現場。六層青磚老倉庫的西牆完整保留了「八百壯士」血戰四晝夜時留下的 8 個巨型砲彈孔與 430 多個密集槍彈彈痕，牆面滄桑震撼。館內詳實陳列歷史實物與全景沙盤（週一閉館，免門票）。走出紀念館，沿蘇州河親水木棧道散步，河景與橫跨兩岸的百年老橋相映成趣。
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 地鐵路線：</span>
+                  <span class="metro-pill m-l8">8號線</span> <span class="metro-pill m-l12">12號線</span> <span class="font-mono font-bold text-amber-300">曲阜路站 [Qufu Rd]</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                    <span class="text-slate-200">由 <strong>2號口</strong> 或 <strong>3號口</strong> 出站，沿西藏北路向南跨過新閘橋，右轉即達光復路四行倉庫（步行約 400 公尺）。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ew text-[10px]">光復路 GUANGFU RD.</span>
+                    <span class="sh-sign-ns text-[10px] ml-1">晉元路 JINYUAN RD.</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">靜安區光復路1號（四行倉庫抗戰舊址）</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                  <span>過新閘橋後西側整面巨大彈孔牆即映入眼簾，西側設有追思廣場與人民咖啡館；蘇州河遊船碼頭亦在附近。</span>
+                </div>
+              </div>
+
+              <!-- 茶歇雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">特色小歇</span>
+                  <strong class="text-slate-900">四行倉庫·人民咖啡館 (1F) / 靜安大悅城 (曲阜路站)</strong>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>招牌特色：</strong> 人民咖啡館提供特色文創特調、懷舊搪瓷杯咖啡；靜安大悅城頂樓設有屋頂摩天輪 Sky Ring。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 3.3: 1933老場坊 ➔ 靜安寺夜色 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1200&q=80" 
+                   alt="靜安寺金碧輝煌夜色實景" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：市中心金碧輝煌的千年古剎</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">15:30 - 21:00</span>
+                  <h4 class="text-base font-bold text-slate-900">【1933老場坊建築攝影 ➔ 靜安寺璀璨夜景】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Jingan+Temple+Shanghai" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                下午探訪全球唯一的巴西利卡式宰牲場改建文創園區<strong>「1933老場坊」</strong>，傘形花柱、立體懸空旋梯、無樑樓蓋構成了宛如電影《以你的名字呼喚我》或艾雪畫作般的超現實迷宮。傍晚轉赴<strong>靜安寺</strong>，這座始建於西元 247 年的三國千年古剎，在夜間 18:30 金光亮起時，金頂斗拱在現代高樓大廈環繞下金碧輝煌，極致震撼。
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 地鐵路線：</span>
+                  <span class="metro-pill m-l4">4號線</span> <span class="metro-pill m-l10">10號線</span> 海倫路站 ➔ <span class="metro-pill m-l2">2號線</span> <span class="metro-pill m-l7">7號線</span> <span class="metro-pill m-l14">14號線</span> <span class="font-mono font-bold text-amber-300">靜安寺站 [Jing'an Temple]</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                    <span class="text-slate-200">靜安寺站由 <strong>1號口</strong> 或 <strong>2號口</strong> 出站，一抬頭即見巍峨的金色山門與鐘鼓樓正門。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ew text-[10px]">南京西路 WEST NANJING RD.</span>
+                    <span class="sh-sign-ns text-[10px] ml-1">華山路 HUASHAN RD.</span>
+                    <span class="sh-sign-ew text-[10px] ml-1">沙涇路 SHAJING RD.</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">虹口區沙涇路10號（老場坊）；靜安區南京西路1686號（靜安寺正門）</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                  <span>靜安寺夜景拍攝最佳機位在對街「芮歐百貨」二樓天橋或靜安公園草坪；寺廟白天入內門票 50 元，夜間在外欣賞金色外觀最為耀眼。</span>
+                </div>
+              </div>
+
+              <!-- 美食雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">晚餐首選</span>
+                  <strong class="text-slate-900">人和館 (肇嘉浜路店 / 靜安店)</strong>
+                  <span class="text-slate-500 font-mono">米其林一星本幫菜</span>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>招牌必吃：</strong> 金牌脆皮雞（皮脆如玻璃、肉嫩多汁）、蟹粉撈飯（黃澄澄厚蟹膏蟹肉）、本幫燻魚、糟溜黃魚片。（⚠️ 務必提早在大眾點評線上取號排隊！）
+                </div>
+                <div class="pt-1 border-t border-rose-200/60 text-slate-600 pl-2 text-[11px]">
+                  <span class="text-rose-700 font-bold">備案選擇：</span>
+                  【備案1】圓苑酒家 (久光百貨8F，號稱上海紅燒肉鼻祖、糯米紅棗) ｜ 【備案2】蘇小柳手工點心 (晶品購物中心B1，現包皮凍手工小籠包、鮮蝦雲吞)。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== DAY 4 ==================== -->
+    <div id="card-d4" class="day-section bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm mb-10 card-transition">
+      <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white p-5 sm:p-6 flex flex-wrap items-center justify-between gap-3 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <span class="px-3 py-1 rounded-lg bg-rose-600 text-white text-xs font-black tracking-wider uppercase">DAY 4</span>
+          <div>
+            <h3 class="text-base sm:text-lg font-bold">江南水鄉古鎮風情與濱江現代藝術</h3>
+            <span class="text-xs text-slate-400">朱家角水鄉古鎮 ➔ 徐匯濱江西岸美術館 ➔ 油罐藝術公園 ➔ 浦東美術館(MAP)鏡廳夕照 / 北外灘夜景</span>
+          </div>
+        </div>
+        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-rose-300 border border-slate-700">
+          水鄉古意 ✕ 前衛江岸
+        </span>
+      </div>
+
+      <div class="p-6 space-y-8">
+        <!-- Spot 4.1: 朱家角江南水鄉古鎮 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pb-8 border-b border-slate-100">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" 
+                   alt="朱家角古鎮放生橋與小橋流水" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：江南第一石拱放生橋</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">08:30 - 13:30</span>
+                  <h4 class="text-base font-bold text-slate-900">【朱家角江南水鄉古鎮漫遊】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Zhujiajiao+Ancient+Town" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                距離市區最便捷的千年水鄉古鎮，地鐵 17 號線直達。必訪五孔石拱「放生橋」（全江南最大古石拱橋）、穿梭青石板路「北大街」、參觀典雅的「課植園」水鄉園林與「大清郵局舊址」。搭乘搖櫓手搖快船穿行於明清老宅與石橋下，沿街飄散著熱騰騰阿婆粽與紅燒扎肉的濃醇香氣。
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 地鐵路線：</span>
+                  <span class="metro-pill m-l2">2號線</span> 往虹橋方向至虹橋火車站 ➔ 直轉 <span class="metro-pill m-l17">17號線</span> 直達 <span class="font-mono font-bold text-amber-300">朱家角站 [Zhujiajiao]</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                    <span class="text-slate-200">由 <strong>1號口</strong> 出站，可步行 15 分鐘或於站外搭乘接駁車/人力車（約 5 分鐘）直達古鎮遊客中心。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ns text-[10px]">北大街 BEIDA ST.</span>
+                    <span class="sh-sign-ew text-[10px] ml-1">新風路 XINFENG RD.</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">青浦區朱家角鎮新風路555號（遊客服務中心）；北大街223號（茂源飯店）</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                  <span>古鎮免門票進入（景點內部小聯票約 60 元可選購）；手搖船單程每船約 40-60 元可坐 6 人，放生橋下碼頭乘船體驗最佳。</span>
+                </div>
+              </div>
+
+              <!-- 美食雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">水鄉午餐首選</span>
+                  <strong class="text-slate-900">茂源飯店 (朱家角北大街店)</strong>
+                  <span class="text-slate-500 font-mono">北大街223號臨河</span>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>招牌必吃：</strong> 清蒸白水魚（肉質極鮮嫩）、阿婆大肉粽、紅燒扎肉（肥而不膩香甜入味）、蚌肉豆腐、銀魚炒蛋。
+                </div>
+                <div class="pt-1 border-t border-rose-200/60 text-slate-600 pl-2 text-[11px]">
+                  <span class="text-rose-700 font-bold">備案選擇：</span>
+                  【備案1】井亭老菜館 (西井街56號，臨河古色古香觀景座，響油鱔糊) ｜ 【備案2】葛氏阿婆粽 &amp; 吳字坊臭豆腐 (北大街沿途現炸現買)。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 4.2: 徐匯濱江·西岸美術館大道 ➔ 浦東美術館 (MAP) / 北外灘 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80" 
+                   alt="西岸美術館與油罐藝術公園實景" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：西岸藝術走廊與油罐公園</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">14:30 - 21:30</span>
+                  <h4 class="text-base font-bold text-slate-900">【徐匯西岸藝術走廊 ➔ 浦東美術館(MAP)鏡廳夕陽】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Museum+of+Art+Pudong+Shanghai" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                午後返回市區前往<strong>徐匯濱江</strong>，造訪法國龐畢度特展駐地的<strong>西岸美術館</strong>與 5 個巨大儲油罐改造的<strong>油罐藝術公園 (Tank Shanghai)</strong>。傍晚直奔東方明珠正下方的<strong>浦東美術館 (MAP)</strong>，在建築大師讓·努維爾打造的「鏡廳 (Mirror Hall)」前，將落日餘暉與外灘萬國建築倒影盡收眼底，被譽為「全上海最浪漫文藝的夕陽機位」！夜間亦可順道至北外灘白玉蘭親水平台遠眺浦東全景。
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 地鐵路線：</span>
+                  <span class="metro-pill m-l11">11號線</span> 雲錦路站 (西岸) ➔ <span class="metro-pill m-l2">2號線</span> <span class="metro-pill m-l14">14號線</span> <span class="font-mono font-bold text-amber-300">陸家嘴站 1號口</span> (浦東美術館) / 或 12號線國際客運中心站 (北外灘)
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                    <span class="text-slate-200">西岸由雲錦路站 <strong>2號口</strong> 步行至油罐公園；浦東美術館由陸家嘴站 <strong>1號口</strong> 沿濱江大道南行 500 公尺。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ns text-[10px]">龍騰大道 LONGTENG AVE.</span>
+                    <span class="sh-sign-ns text-[10px] ml-1">濱江大道 BINJIANG AVE.</span>
+                    <span class="sh-sign-ew text-[10px] ml-1">東大名路 DONGDAMING RD.</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">徐匯區龍騰大道2600號（西岸美術館）；浦東新區濱江大道2777號（浦東美術館）</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                  <span>浦東美術館鏡廳位於 2F 與 3F，落地通透鏡面落地窗正對外灘萬國建築，夕陽下沉時（約 17:30-18:30）光影極佳；頂樓設有無遮蔽露台餐廳。</span>
+                </div>
+              </div>
+
+              <!-- 美食雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">晚餐首選</span>
+                  <strong class="text-slate-900">小紹興 (雲南南路總店) / 醉輝皇 (白玉蘭廣場店)</strong>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>招牌必吃：</strong> 小紹興：百年白斬雞（皮脆肉嫩汁香、沾秘製蔥薑豉油）、濃郁原汁雞粥、八寶辣醬、醃篤鮮。
+                </div>
+                <div class="pt-1 border-t border-rose-200/60 text-slate-600 pl-2 text-[11px]">
+                  <span class="text-rose-700 font-bold">備案選擇：</span>
+                  【備案1】醉輝皇 (北外灘白玉蘭廣場店，無敵落地窗平視陸家嘴天際線江景粵菜海鮮) ｜ 【下午茶】西岸美術館咖啡 / 喬咖啡 (西岸店)。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== DAY 5 ==================== -->
+    <div id="card-d5" class="day-section bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm mb-10 card-transition">
+      <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white p-5 sm:p-6 flex flex-wrap items-center justify-between gap-3 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <span class="px-3 py-1 rounded-lg bg-rose-600 text-white text-xs font-black tracking-wider uppercase">DAY 5</span>
+          <div>
+            <h3 class="text-base sm:text-lg font-bold">石庫門文創弄堂、愚園路慢行與老字號伴手禮採買</h3>
+            <span class="text-xs text-slate-400">田子坊石庫門 ➔ 巨富長商圈本幫菜 ➔ 愚園路公共市集 ➔ 國際飯店蝴蝶酥等老字號採買 ➔ 返程</span>
+          </div>
+        </div>
+        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-rose-300 border border-slate-700">
+          滿載海派風華返程
+        </span>
+      </div>
+
+      <div class="p-6 space-y-8">
+        <!-- Spot 5.1: 田子坊石庫門文創街區 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pb-8 border-b border-slate-100">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1200&q=80" 
+                   alt="田子坊石庫門弄堂與文創小店實景" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：活態石庫門市井迷宮弄堂</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">09:00 - 11:30</span>
+                  <h4 class="text-base font-bold text-slate-900">【田子坊石庫門歷史文創街區】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Tianzifang+Shanghai" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                上海最早由畫家陳逸飛等藝術家入駐催生的「活化石庫門弄堂」。錯綜複雜的里弄保留了居民晾衣竹竿、水磨石門框與老信箱的市井煙火氣息，巷道內藏著精緻手作皮件坊、當代畫廊、特色雪花膏鋪子與茶歇小館，宛如一座生動的露天海派弄堂博物館。
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 地鐵路線：</span>
+                  <span class="metro-pill m-l9">9號線</span> <span class="font-mono font-bold text-amber-300">打浦橋站 [Dapuqiao]</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                    <span class="text-slate-200">由 <strong>1號口</strong> 出站，過泰康路馬路即抵田子坊正門石庫門牌樓（泰康路210弄）。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ew text-[10px]">泰康路 TAIKANG RD.</span>
+                    <span class="sh-sign-ns text-[10px] ml-1">瑞金二路 RUIJIN RD.(2)</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">黃浦區泰康路210弄（田子坊景區入口）</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                  <span>弄堂內部四通八達容易迷路，只要認準「泰康路主出口」即可隨時出街；早晨 09:30 抵達時店家剛開門，人少最適合拍照。</span>
+                </div>
+              </div>
+
+              <!-- 美食雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">早午茶點首選</span>
+                  <strong class="text-slate-900">王家沙點心店 (南京西路店) / 弄堂小餛飩食府</strong>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>招牌必吃：</strong> 王家沙：蟹粉小籠包、薺菜鮮肉大餛飩、蝦仁兩面黃；弄堂小餛飩：老牌砂鍋柴片小餛飩、現炸黃金大排。
+                </div>
+                <div class="pt-1 border-t border-rose-200/60 text-slate-600 pl-2 text-[11px]">
+                  <span class="text-rose-700 font-bold">備案選擇：</span>
+                  【備案1】阿大蔥油餅 (永嘉路老字號香酥脆蔥油餅) ｜ 【備案2】富春小籠。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 5.2: 巨富長午餐 ➔ 愚園路歷史街區 ➔ 伴手禮採買 ➔ 機場返程 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+          <div class="lg:col-span-4">
+            <div class="img-box h-48 sm:h-56 w-full rounded-xl">
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80" 
+                   alt="保羅酒樓與經典本幫名菜" 
+                   class="w-full h-full object-cover" loading="lazy">
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-white">實景：巨富長老洋房本幫宴與伴手禮</span>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-800">11:30 - 16:30</span>
+                  <h4 class="text-base font-bold text-slate-900">【巨富長本幫菜 ➔ 愚園路漫步 ➔ 四大伴手禮採買 ➔ 返程】</h4>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Park+Hotel+Bakery+Shanghai" target="_blank" class="text-xs font-bold text-blue-600 hover:underline">地圖導航 ↗</a>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                中午在巨鹿路/富民路老牌名店<strong>保羅酒樓</strong>享用經典海派午宴。隨後漫步長寧<strong>愚園路歷史街區</strong>（愚園公共市集、錢學森舊居）。午後直奔人民廣場/南京東路採買<strong>「上海四大天王伴手禮」</strong>：國際飯店蝴蝶酥、沈大成條頭糕、泰康食品辣醬油與現烤鮮肉月餅。最後搭乘地鐵或極速<strong>磁浮列車</strong>前往機場返程！
+              </p>
+
+              <!-- 5-Point Wayfinding Anatomy -->
+              <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                  <span class="font-bold text-rose-300">🚇 返程路線：</span>
+                  <span class="metro-pill m-l2">2號線</span> 人民廣場 / 南京東路 ➔ 龍陽路站轉 <span class="metro-pill m-mag">磁浮線</span> 7分鐘抵浦東機場 / 或 2/10號線直達虹橋機場
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                  <div>
+                    <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                    <span class="text-slate-200">國際飯店蝴蝶酥位於人民廣場站 <strong>9號口</strong>（黃河路28號）；沈大成位於南京東路站 <strong>1號口</strong>（南京東路636號）。</span>
+                  </div>
+                  <div>
+                    <span class="text-amber-300 font-bold">🪧 實體路牌對照：</span>
+                    <span class="sh-sign-ns text-[10px]">黃河路 HUANGHE RD.</span>
+                    <span class="sh-sign-ew text-[10px] ml-1">南京西路 WEST NANJING RD.</span>
+                    <span class="sh-sign-ew text-[10px] ml-1">愚園路 YUYUAN RD.</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                  <span class="text-rose-300 font-bold mr-1">🏬 官方實體門牌：</span>
+                  <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">黃浦區黃河路28號（國際飯店西餅屋）；靜安區富民路271號（保羅酒樓）</span>
+                </div>
+                <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                  <span class="text-rose-400 font-bold shrink-0">🧭 磁浮機場指南：</span>
+                  <span>前往浦東機場由 2 號線至龍陽路站轉乘磁浮列車，持當日登機證享有 8 折（40 元人民幣），7-8 分鐘即可飆速直抵航廈，避開地鐵 70 分鐘長途跋涉！</span>
+                </div>
+              </div>
+
+              <!-- 美食雙案 -->
+              <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3 text-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">午餐首選</span>
+                  <strong class="text-slate-900">保羅酒樓 (富民路店)</strong>
+                  <span class="text-slate-500 font-mono">靜安區富民路271號</span>
+                </div>
+                <div class="text-slate-700 pl-2">
+                  <strong>招牌必吃：</strong> 瑞士牛排（黑胡椒濃醬牛肉極嫩）、清甜細膩青豆泥、保羅特色生煎包、海派炸豬排。
+                </div>
+                <div class="pt-1 border-t border-rose-200/60 text-slate-600 pl-2 text-[11px]">
+                  <span class="text-rose-700 font-bold">備案選擇：</span>
+                  【備案1】海金滋 (進賢路240號，蔥油肉絲麻醬麵、本幫紅燒肉) ｜ 【備案2】媽媽家 (天平路草頭圈子、鹹蛋黃排條)。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 模組 6：上海四大必買伴手禮專題指南 ==================== -->
+  <section id="souvenirs" class="py-12 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-9 h-9 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold text-base shadow-sm">
+          🎁
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">上海四大老字號伴手禮・必買清單與免排隊秘笈</h2>
+          <p class="text-xs sm:text-sm text-slate-500">認明門牌實址與正統招牌，回台送禮自用皆零失誤</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-xs">
+        <!-- Item 1: 國際飯店蝴蝶酥 -->
+        <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50 space-y-3 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold text-[10px]">排隊神話 No.1</span>
+              <span class="font-bold text-slate-900 font-mono">PARK HOTEL</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 mb-1">國際飯店西餅屋・大蝴蝶酥</h3>
+            <p class="text-slate-600 text-[11px] leading-relaxed mb-2">
+              上海西點界永遠的傳奇。外層微焦酥脆，千層奶油香濃郁不甜膩。有原味大蝴蝶酥與鹹香芝士蝴蝶酥兩種。
+            </p>
+            <div class="bg-white p-2.5 rounded-lg border border-slate-200 text-[10.5px] space-y-1">
+              <div><strong>📍 門市：</strong>黃河路28號（黃河路總店）</div>
+              <div><strong>💡 免排隊秘訣：</strong>總店常需排 40-60 分鐘；可至南京西路新世界城 B1 櫃位或微信官方小程式預約下單快取！</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: 沈大成糕糰 -->
+        <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50 space-y-3 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-bold text-[10px]">百年軟糯老字號</span>
+              <span class="font-bold text-slate-900 font-mono">SHEN DA CHENG</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 mb-1">沈大成・條頭糕 &amp; 雙釀團</h3>
+            <p class="text-slate-600 text-[11px] leading-relaxed mb-2">
+              清光緒元年的百年點心名家。條頭糕裹著細膩紅豆沙，外皮軟糯 Q 彈；雙釀團一口能吃到黑芝麻與豆沙雙重內餡，清香撲鼻。
+            </p>
+            <div class="bg-white p-2.5 rounded-lg border border-slate-200 text-[10.5px] space-y-1">
+              <div><strong>📍 門市：</strong>黃浦區南京東路636號（南京東路總店）</div>
+              <div><strong>💡 實用提示：</strong>買現做散裝需當天或隔天食用；禮盒真空裝保存期較長適合帶上飛機。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: 泰康食品月餅與辣醬油 -->
+        <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50 space-y-3 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-[10px]">本幫靈魂調味</span>
+              <span class="font-bold text-slate-900 font-mono">TAIKANG FOODS</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 mb-1">泰康食品・現烤鮮肉月餅 &amp; 黃牌辣醬油</h3>
+            <p class="text-slate-600 text-[11px] leading-relaxed mb-2">
+              現烤鮮肉月餅外皮層層起酥，內餡豬肉肉汁豐沛！另必買「泰康黃牌辣醬油」，帶回台灣搭配炸豬排、排骨年糕，酸甜微辛極為開胃。
+            </p>
+            <div class="bg-white p-2.5 rounded-lg border border-slate-200 text-[10.5px] space-y-1">
+              <div><strong>📍 門市：</strong>黃浦區南京東路353號</div>
+              <div><strong>💡 實用提示：</strong>現烤鮮肉月餅現場吃一顆，外帶辣醬油玻璃瓶需托運。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: 光明邨大酒家 -->
+        <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50 space-y-3 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold text-[10px]">淮海路排隊之冠</span>
+              <span class="font-bold text-slate-900 font-mono">GUANG MING CUN</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 mb-1">光明邨大酒家・現煎鮮肉月餅 &amp; 醬鴨</h3>
+            <p class="text-slate-600 text-[11px] leading-relaxed mb-2">
+              全上海最誇張的排隊老店。採用平底鐵鍋慢火雙面生煎，餅皮焦香不油膩；熟食窗口的本幫醬鴨與上海燻魚更是逢年過節秒殺名品。
+            </p>
+            <div class="bg-white p-2.5 rounded-lg border border-slate-200 text-[10.5px] space-y-1">
+              <div><strong>📍 門市：</strong>黃浦區淮海中路588號</div>
+              <div><strong>💡 避雷提示：</strong>生煎月餅窗口常排隊 1-2 小時，如趕時間可轉購熟食窗口真空醬鴨。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 模組 7：景點實名預約須知清單 (Reservations) ==================== -->
+  <section id="reservations" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center gap-3 mb-6">
+      <div class="w-9 h-9 rounded-xl bg-purple-600 text-white flex items-center justify-center font-bold text-base shadow-sm">
+        🎫
+      </div>
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">重磅景點官方預約與購票管道速查</h2>
+        <p class="text-xs sm:text-sm text-slate-500">全部為官方微信小程式或現場驗票通道，杜絕黃牛與代購陷阱</p>
+      </div>
+    </div>
+
+    <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white font-bold border-b border-slate-800">
+              <th class="py-3 px-4 sm:px-6">場館景點</th>
+              <th class="py-3 px-4 sm:px-6">預約/購票官方通路</th>
+              <th class="py-3 px-4 sm:px-6">開放預約天數</th>
+              <th class="py-3 px-4 sm:px-6">門票價格與備註</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-bold text-slate-900">上海博物館 (東館 / 人民廣場館)</td>
+              <td class="py-3.5 px-4 sm:px-6 text-blue-600 font-medium">微信搜尋「上海博物館」小程式</td>
+              <td class="py-3.5 px-4 sm:px-6 font-bold text-rose-600">提前 7 天每日 12:00 開搶</td>
+              <td class="py-3.5 px-4 sm:px-6">常設展<strong>免費</strong>；週一閉館（特展另計）。持台胞證實名刷證入館。</td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-bold text-slate-900">朵雲書院·旗艦店 (上海中心52F)</td>
+              <td class="py-3.5 px-4 sm:px-6 text-blue-600 font-medium">微信搜尋「世紀朵雲」小程式</td>
+              <td class="py-3.5 px-4 sm:px-6 font-bold text-rose-600">提前 5-7 天預約參觀時段</td>
+              <td class="py-3.5 px-4 sm:px-6">入場<strong>免費預約</strong>；觀景位需於咖啡吧低消一杯飲品。</td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-bold text-slate-900">浦東美術館 (MAP)</td>
+              <td class="py-3.5 px-4 sm:px-6 text-blue-600 font-medium">微信搜尋「浦東美術館MAP」或大眾點評</td>
+              <td class="py-3.5 px-4 sm:px-6">平日隨時可購；建議提前購票</td>
+              <td class="py-3.5 px-4 sm:px-6">單人票約 100-150 元（含鏡廳全展）；週一正常開館。</td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-bold text-slate-900">豫園古典園林</td>
+              <td class="py-3.5 px-4 sm:px-6 text-blue-600 font-medium">微信搜尋「豫園」或現場售票處</td>
+              <td class="py-3.5 px-4 sm:px-6">提前 1-3 天線上購票免排長隊</td>
+              <td class="py-3.5 px-4 sm:px-6">淡季 30 元 / 旺季 40 元；週一閉園維護（法定節假日除外）。</td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-bold text-slate-900">上海中心大廈・上海之巔觀景台</td>
+              <td class="py-3.5 px-4 sm:px-6 text-blue-600 font-medium">大眾點評 / 攜程 / 官方售票處</td>
+              <td class="py-3.5 px-4 sm:px-6">可當日購票；日落時段提前訂</td>
+              <td class="py-3.5 px-4 sm:px-6">成人票約 180 元；118 層 360 度俯瞰浦江夜景。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 頁尾 (Footer) ==================== -->
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4 space-y-4">
+      <div class="flex items-center justify-center gap-2 text-white font-bold text-base">
+        <span>🏮</span>
+        <span>上海五天四夜極致自由行詳細攻略指南</span>
+      </div>
+      <p class="text-slate-500 max-w-xl mx-auto">
+        專屬為 Roy Wang 策劃客製 ｜ 2026 最新官方路網與實境路標核實 ｜ 外灘 ✕ 梧桐法租界 ✕ 朱家角 ✕ 本幫名點
+      </p>
+      <div class="pt-2 flex items-center justify-center gap-6 text-slate-300 font-medium">
+        <a href="./上海五天四夜旅遊詳細攻略.pdf" download class="hover:text-rose-400 transition-colors">下載完整 PDF 指南</a>
+        <span>•</span>
+        <a href="#transit-decoder" class="hover:text-rose-400 transition-colors">地鐵路網速查</a>
+        <span>•</span>
+        <a href="#overview" class="hover:text-rose-400 transition-colors">回到矩陣總覽</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== 互動過濾腳本 ==================== -->
+  <script>
+    function filterDay(day) {
+      document.querySelectorAll('.day-tab-btn').forEach(btn => {
+        if (btn.getAttribute('data-target') === day) {
+          btn.classList.add('bg-white', 'text-slate-900', 'shadow-sm');
+          btn.classList.remove('text-slate-600');
+        } else {
+          btn.classList.remove('bg-white', 'text-slate-900', 'shadow-sm');
+          btn.classList.add('text-slate-600');
+        }
+      });
+
+      const allSections = document.querySelectorAll('.day-section');
+      if (day === 'all') {
+        allSections.forEach(s => s.classList.remove('hidden'));
+      } else {
+        allSections.forEach(s => {
+          if (s.id === 'card-' + day) {
+            s.classList.remove('hidden');
+          } else {
+            s.classList.add('hidden');
+          }
+        });
+      }
+    }
+  </script>
+</body>
+</html>
